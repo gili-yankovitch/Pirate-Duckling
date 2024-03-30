@@ -1,6 +1,8 @@
 # Pirate-Duckling
 Pirate Duckling is an ATTiny85 based Rubber Ducky clone. It is built with absolute minimal components in mind.
 
+This PCB is manufactured with 1.2mm thickness. As USB ports are thicker than this, additional "USB Fatterners" are provided under hardware/ to add the necessary thickness to the USB part of the PCB.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/gili-yankovitch/Pirate-Duckling/master/images/front.png" height="400"> <img src="https://raw.githubusercontent.com/gili-yankovitch/Pirate-Duckling/master/images/back.png" height="400">
 </p>
