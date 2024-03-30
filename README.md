@@ -46,5 +46,5 @@ Flashing software using the USB port would require flashing the ATTiny85 with th
 
 After that, you can build the software normally and flash it using the USB port. Run the following command and remember to only plug in the USB once the flash utility indicates it:
 ```
-pio run --environment attiny85 --target upload
+pio run --environment digispark-tiny --target upload
 ```
