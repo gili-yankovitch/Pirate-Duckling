@@ -28,7 +28,7 @@ All PCB specs are provided here under hardware/ and this can be easily manufactu
 
 # Software
 ## Software Building
-Building the software is easy using platformio. Either run the [build.bat](build.bat) script, or simply execute:
+Building the software is easy using platformio. Simply execute:
 ```
 pio run --environment attiny85
 ```
@@ -41,11 +41,11 @@ pio run --environment attiny85 --target upload
 ```
 
 ### Software Flashing Using the Digispark bootloader using the USB port
-Flashing software using the USB port would require flashing the ATTiny85 with the bootloader [Attiny85.hex](Digistump/bootloader/ATtiny85.hex) using the flash script [Burn_AT85_bootloader.bat](Digistump/bootloader/Burn_AT85_bootloader.bat) which also sets the appropriate fuses at flash time.
+Flashing software using the USB port would require flashing the ATTiny85 with the bootloader [Attiny85.hex](https://github.com/gili-yankovitch/tinypad/blob/main/Digistump/bootloader/ATtiny85.hex) using the flash script [Burn_AT85_bootloader.bat](https://github.com/gili-yankovitch/tinypad/blob/main/Digistump/bootloader/Burn_AT85_bootloader.bat) which also sets the appropriate fuses at flash time.
 ```
-<ArduinoFolder>\packages\arduino\tools\avrdude\6.3.0-arduino17\bin\avrdude.exe -C"<ArduinoFolder>\packages\arduino\tools\avrdude\6.3.0-arduino17\etc\avrdude.conf" -v -pattiny85 -cstk500v1 -P<COMPORT> -b19200 -Uflash:w:"ATtiny85.hex":i -U lfuse:w:0xe1:m -U hfuse:w:0xdd:m -U efuse:w:0xfe:m
+%USERPROFILE%\.platformio\packages\arduino\tools\avrdude\6.3.0-arduino17\bin\avrdude.exe -C"%USERPROFILE%\.platformio\packages\arduino\tools\avrdude\6.3.0-arduino17\etc\avrdude.conf" -v -pattiny85 -cstk500v1 -P<COMPORT> -b19200 -Uflash:w:"ATtiny85.hex":i -U lfuse:w:0xe1:m -U hfuse:w:0xdd:m -U efuse:w:0xfe:m
 ```
-* Don't forget to swap `<ArduinoFolder>` and `<COMPORT>` to the appropriate arduino install folder and the Arduino COM port.
+* Don't forget to swap `<COMPORT>` to the appropriate COM port.
 
 After that, you can build the software normally and flash it using the USB port. Run the following command and remember to only plug in the USB once the flash utility indicates it:
 ```
