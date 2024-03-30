@@ -12,6 +12,7 @@ Please install the following software to be able to flash software to the device
 * [Arduino SDK](https://www.arduino.cc/en/software)
 * [Platformio](https://platformio.org/install/cli) or VScode with Platformio AddOn
 * [Digispark Drivers](https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip)
+* [micronucleus](https://github.com/micronucleus/micronucleus/releases/download/v2.6/micronucleus-cli-master-882e7b4a-x86_64-MINGW64_NT-10.0-17763.zip) in case platformio's toolchain fails to find libusb0.dll, extract it under `%USERPROFILE%\.platformio\packages\tool-micronucleus`
 
 ### Hardware
 All PCB specs are provided here under hardware/ and this can be easily manufactured as well as paneled for a larger volume. There are no special requirements for this board's manufacturing process.
